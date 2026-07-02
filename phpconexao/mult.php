@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Simples</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background: var(--bg);
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 24px;
+        margin: 0;
+        height: 100%;
+        background-color: #636364;
+      }
+      h1{
+        text-align: center;
+      }
+      .form-page {
+        width: 100%;
+        max-width: 640px;
+      }
+      .page-title {
+        font-size: 1.6rem;
+        margin: 0 0 14px 0;
+        color: #0f172a;
+        text-align: left;
+        font-weight: 700;
+      }
+      .form-card {
+        background: var(--card);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+        background-color: #a1a1a1;
+      }
+      .form-row {
+        margin-bottom: 12px;
+      }
+
+      .form-label {
+        color: #0f172a;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .form-control {
+        border-radius: 8px;
+        border: 1px solid #e6eef9;
+        padding: 10px 12px;
+        box-shadow: none;
+      }
+      
+      .btn-primary {
+        width: 50%;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        
+        
+      }
+      
+      .btn-primary:hover {
+        filter: brightness(0.95);
+      }
+      @media (max-width: 540px) {
+        .page-title {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="form-page">
+
+      <form class="form-card" action="./resulmult.php" method="post">
+        <h1>Formulário</h1>
+        <div class="form-row">
+          <label for="name" class="form-label">Digite o primeiro numero:</label>
+          <input type="number" class="form-control" id="numero1" placeholder="Digite o primeiro numero.." name="numero1" >
+        </div>
+
+        <div class="form-row">
+          <label for="email" class="form-label">Digite o segundo numero:</label>
+          <input type="number" class="form-control" id="email" name="numero2" placeholder="Digite o segundo numero..." >
+        </div>
+        
+       <div class="form-row">
+          <label for="email" class="form-label">Digite o terceiro numero:</label>
+          <input type="number" class="form-control" id="email" name="numero3" placeholder="Digite o segundo numero..." >
+        </div>
+
+        <div class="form-row">
+          <label for="message" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="message" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

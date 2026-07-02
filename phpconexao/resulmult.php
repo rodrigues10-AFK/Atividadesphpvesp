@@ -78,20 +78,21 @@
 
 <body>
     <div class="container">
-        <h1>Resultado da soma</h1>
+        <h1>Resultado da multiplicação</h1>
 
         <?php
-        include "";
+        include "conexao.php";
 
         $num1 = $_POST['numero1'];
         $num2 = $_POST['numero2'];
+        $num3 = $_POST['numero3'];
         $obs = $_POST['mensagem'];
 
 
-        $resultado = $num1 + $num2;
+        $resultado = $num1*$num2*$num3;
 
-        $sql = "INSERT INTO formsoma (numero1, numero2, resultado, obs)
-                VALUES ($num1, $num2, $resultado, '$obs')";
+        $sql = "INSERT INTO formmult (numero1, numero2, numero3, resultado, obs)
+                VALUES ($num1, $num2, $num3, $resultado, '$obs')";
 
         
          if ($conexao->query($sql)) {
@@ -100,7 +101,7 @@
             echo "<div class='error-message'>✗ Erro ao salvar: " . $conexao->error . "</div>";
         }
 
-        echo "<p><strong>Soma:</strong> $resultado</p>";
+        echo "<p><strong>Multiplicação:</strong> $resultado</p>";
 
         echo "<p><strong>Observação:</strong> $obs</p>";
 
