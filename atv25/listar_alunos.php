@@ -19,12 +19,14 @@
 <body>
     <?php
     include "banco.php";
-    $sql = "SELECT * FROM prod";
+    $sql = "SELECT * FROM alunos";
     $resultado = $conexao->query($sql);
     while ($cliente = $resultado->fetch_assoc()) {
-        echo "Produto: " . $cliente['produto1'], '<p>';
-        echo "Quantidade: " . $cliente['produto2'], '<p>';
-        echo "Preço: " . $cliente['produto3'], '<p>';
+        echo "Nome: " . $cliente['nome'], '<p>';
+        echo "Idade: " . $cliente['idade'], '<p>';
+        echo "Curso: " . $cliente['curso'], '<p>';
+        echo "Cidade: " . $cliente['cidade'], '<p>';
+        echo "Entrega: " . $cliente['entrega'], '<p>';
         echo "<hr>";
     } ?> 
     </body>
