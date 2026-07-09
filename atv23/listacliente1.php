@@ -25,7 +25,9 @@
             echo "Idade: " . $cliente['idade'], '<p>';
             echo "Telefone: " . $cliente['telefone'], '<p>';
             echo "Cidade: " . $cliente['cidade'], '<p>';
+            echo "<a href='editarclientes.php?id=" . $cliente['id'] . "'>Editar</a>";
             echo "<hr>";
+            
         } ?> </body>
 
 </html>
