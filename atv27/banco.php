@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "senac";
-$banco = "db_cliente";
+$banco = "formulario";
 $porta = "3307";
 
 $conexao=new mysqli(

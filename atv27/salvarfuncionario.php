@@ -73,6 +73,28 @@
             border-radius: 4px;
             margin-bottom: 15px;
         }
+
+        .actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -80,14 +102,14 @@
     <?php
     include "banco.php";
 
-    $titulo = $_POST['nome'];
-    $autor = $_POST['autor'];
-    $editora = $_POST['editora'];
-    $publicacao = $_POST['publicacao'];
-    $paginas = $_POST['paginas'];
+    $nome = $_POST['nome'];
+    $cargo = $_POST['cargo'];
+    $departamento = $_POST['departamento'];
+    $salario = $_POST['salario'];
+    $admissao = $_POST['admissao'];
 
-    $sql = "INSERT INTO livros (titulo, autor, editora, publicacao, quantidade)
-    VALUES ('$titulo', '$autor', '$editora', '$publicacao', '$paginas')
+    $sql = "INSERT INTO funcionario (nome, cargo, departamento, salario, admissao)
+    VALUES ('$nome','$cargo','$departamento','$salario','$admissao')
     ";
 
     if ($conexao->query($sql)) {
@@ -97,6 +119,11 @@
     }
 
     ?>
+    <div class="actions">
+        <a href="form.php">
+            <button class="btn-primary">Voltar</button>
+        </a>
+    </div>
 </body>
 
 </html>

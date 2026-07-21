@@ -1,7 +1,7 @@
 <?php 
 include "banco.php";
 $id= $_GET ['id']; 
-$sql = "SELECT * FROM form WHERE id = $id";
+$sql = "SELECT * FROM livros WHERE id = $id";
 
 $resultado = $conexao ->query($sql);
 $cliente = $resultado ->fetch_assoc();
@@ -32,7 +32,7 @@ $cliente = $resultado ->fetch_assoc();
   <body>
     <main class="form-page">
 
-      <form class="form-card" action="./atualizarclientes.php" method="post">
+      <form class="form-card" action="./atualizarlivro.php" method="post">
        
         <h1>Atualizar cadastro</h1>
 

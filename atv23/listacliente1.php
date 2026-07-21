@@ -25,9 +25,10 @@
             echo "Idade: " . $cliente['idade'], '<p>';
             echo "Telefone: " . $cliente['telefone'], '<p>';
             echo "Cidade: " . $cliente['cidade'], '<p>';
-            echo "<a href='editarclientes.php?id=" . $cliente['id'] . "'>Editar</a>";
+            echo "<a href='editarclientes.php?id=" . $cliente['id'] . "'>  <button>Editar</button></a>";
+            echo "<a href='excluir_cliente.php?id=" . $cliente['id'] . "'>  <button>Excluir</button></a>";
             echo "<hr>";
-            
+           
         } ?> </body>
 
 </html>

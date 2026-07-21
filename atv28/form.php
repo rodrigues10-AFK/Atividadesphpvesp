@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário Simples</title>
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css">
     <style>
       :root {
         --bg: #f4f7fb;
@@ -116,82 +127,43 @@
       }
     </style>
   </head>
-
   <body>
     <main class="form-page">
-      <form class="form-card" action="./salvarlivro.php" method="post">
-        <h1> cadastro de livros</h1>
+
+      <form class="form-card" action="./salvaral.php" method="post">
+        <h1>Formulário</h1>
 
         <div class="form-row">
-          <input
-            type="hidden"
-            class="form-control"
-            id="id"
-            name="id"
-            value="<?= htmlspecialchars($cliente['id'] ?? '') ?>"
-          />
+          <label for="name" class="form-label">Nome Completo:</label>
+          <input type="text" class="form-control" id="numero1"  name="nome" >
         </div>
 
         <div class="form-row">
-          <label for="titulo" class="form-label">Título do livro:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="titulo"
-            name="nome"
-            value="<?= htmlspecialchars($cliente['titulo'] ?? '') ?>"
-          />
+          <label for="email" class="form-label">Idade:</label>
+          <input type="number" class="form-control" id="email" name="idade"  >
+        </div>
+        
+        <div class="form-row">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email"  >
         </div>
 
         <div class="form-row">
-          <label for="autor" class="form-label">Autor:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="autor"
-            name="autor"
-            value="<?= htmlspecialchars($cliente['autor'] ?? '') ?>"
-          />
+          <label for="email" class="form-label">Telefone:</label>
+          <input type="tel" class="form-control" id="email" name="telefone"  >
         </div>
 
         <div class="form-row">
-          <label for="editora" class="form-label">Editora:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="editora"
-            name="editora"
-            value="<?= htmlspecialchars($cliente['editora'] ?? '') ?>"
-          />
-        </div>
-
-        <div class="form-row">
-          <label for="publicacao" class="form-label">Publicação:</label>
-          <input
-            type="date"
-            class="form-control"
-            id="publicacao"
-            name="publicacao"
-            value="<?= htmlspecialchars($cliente['publicacao'] ?? '') ?>"
-          />
-        </div>
-
-        <div class="form-row">
-          <label for="paginas" class="form-label">Quantidade de páginas:</label>
-          <input
-            type="number"
-            class="form-control"
-            id="paginas"
-            name="paginas"
-            min="1"
-            value="<?= htmlspecialchars($cliente['quantidade'] ?? '') ?>"
-          />
+          <label for="email" class="form-label">Cidade:</label>
+          <input type="text" class="form-control" id="email" name="cidade"  >
         </div>
 
         <div class="actions">
           <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
       </form>
+
+
     </main>
   </body>
 </html>

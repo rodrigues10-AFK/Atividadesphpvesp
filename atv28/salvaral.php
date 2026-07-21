@@ -80,14 +80,14 @@
     <?php
     include "banco.php";
 
-    $titulo = $_POST['nome'];
-    $autor = $_POST['autor'];
-    $editora = $_POST['editora'];
-    $publicacao = $_POST['publicacao'];
-    $paginas = $_POST['paginas'];
+    $nome = $_POST['nome'];
+    $idade = $_POST['idade'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $cidade = $_POST['cidade'];
 
-    $sql = "INSERT INTO livros (titulo, autor, editora, publicacao, quantidade)
-    VALUES ('$titulo', '$autor', '$editora', '$publicacao', '$paginas')
+    $sql = "INSERT INTO form (nome, idade,email,telefone,cidade)
+    VALUES ('$nome','$idade','$email','$telefone','$cidade')
     ";
 
     if ($conexao->query($sql)) {
@@ -97,6 +97,11 @@
     }
 
     ?>
+                    <div class="acoes">
+                        <a href="listaral.php">
+                            <button class="editar">Formulário</button>
+                        </a>
+                    </div>
 </body>
 
 </html>
