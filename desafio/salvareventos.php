@@ -80,14 +80,15 @@
     <?php
     include "banco.php";
 
-    $titulo = $_POST['nome'];
-    $autor = $_POST['autor'];
-    $editora = $_POST['editora'];
-    $publicacao = $_POST['publicacao'];
-    $paginas = $_POST['paginas'];
+    $nome = $_POST['nome'];
+    $data = $_POST['data'];
+    $horario = $_POST['horario'];
+    $local = $_POST['local'];
+    $cidade = $_POST['cidade'];
+    $vagas = $_POST['vagas'];
 
-    $sql = "INSERT INTO livros (titulo, autor, editora, publicacao, paginas)
-    VALUES ('$titulo', '$autor', '$editora', '$publicacao', '$paginas')
+    $sql = "INSERT INTO eventos (nome_evento, data_evento, horario, local_evento, cidade, quantidade_de_vagas)
+    VALUES ('$nome', '$data', '$horario', '$local', '$cidade', '$vagas')
     ";
 
     if ($conexao->query($sql)) {

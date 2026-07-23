@@ -28,7 +28,6 @@
             echo "<a href='editarlivro.php?id=" . $cliente['id'] . "'>  <button>Editar</button></a>";
             echo "<a href='excluir_livro.php?id=" . $cliente['id'] . "'>  <button>Excluir</button></a>";
             echo "<hr>";
-           
         } ?> </body>
 
 </html>

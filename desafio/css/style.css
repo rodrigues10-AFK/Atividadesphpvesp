@@ -1,0 +1,74 @@
+      body {
+        background: var(--bg);
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 24px;
+        margin: 0;
+        height: 100%;
+        background-color: #0c0c0c;
+      }
+      h1{
+        text-align: center;
+      }
+      .form-page {
+        width: 100%;
+        max-width: 640px;
+      }
+      .page-title {
+        font-size: 1.6rem;
+        margin: 0 0 14px 0;
+        color: #0f172a;
+        text-align: left;
+        font-weight: 700;
+      }
+      .form-card {
+        background: var(--card);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+        background-color: #a1a1a1;
+      }
+      .form-row {
+        margin-bottom: 12px;
+      }
+
+      .form-label {
+        color: #0f172a;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .form-control {
+        border-radius: 8px;
+        border: 1px solid #e6eef9;
+        padding: 10px 12px;
+        box-shadow: none;
+      }
+      
+      .btn-primary {
+        width: 50%;
+        padding: 10px 12px;
+        border-radius: 8px;
+      }
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+        
+        
+        
+      }
+      
+      .btn-primary:hover {
+        filter: brightness(0.95);
+      }
+      @media (max-width: 540px) {
+        .page-title {
+          text-align: center;
+        }
+      }
+ 
