@@ -66,16 +66,30 @@ h1{
     padding:13px 15px;
     border-radius:12px;
     border:1px solid rgba(0,229,255,.25);
-    background:rgba(255,255,255,.05);
-    color:#fff;
+    background:#1e293b;
+    color:#ffffff !important;
+    caret-color:#ffffff;
     transition:.3s;
+}
+
+.form-control::placeholder{
+    color:#b8c5d6;
 }
 
 .form-control:focus{
     outline:none;
     border-color:var(--azul);
+    background:#0f172a;
+    color:#ffffff !important;
     box-shadow:0 0 15px rgba(0,229,255,.5);
-    background:rgba(255,255,255,.08);
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover,
+.form-control:-webkit-autofill:focus{
+    -webkit-text-fill-color:#ffffff !important;
+    -webkit-box-shadow:0 0 0px 1000px #1e293b inset;
+    transition:background-color 5000s ease-in-out 0s;
 }
 
 .actions{
